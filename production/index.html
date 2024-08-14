@@ -15,17 +15,36 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Slider -->
     <section id="hero">
-        <div class="hero-content">
-            <h1>Reliable Logistics Solutions for Your Business</h1>
-            <p>Efficient, on-time deliveries across the nation.</p>
-            <button onclick="scrollToSection('#contact')">Get a Quote</button>
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://via.placeholder.com/1600x500/EA580C/FFFFFF');">
+                <div class="slide-content">
+                    <h1>Reliable Logistics Solutions</h1>
+                    <p>Efficient, on-time deliveries across the nation.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1600x500/31318F/FFFFFF');">
+                <div class="slide-content">
+                    <h1>Warehousing Services</h1>
+                    <p>Safe and secure storage solutions.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://via.placeholder.com/1600x500/4A4A4A/FFFFFF');">
+                <div class="slide-content">
+                    <h1>Last Mile Delivery</h1>
+                    <p>Ensuring your goods reach the final destination.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <span class="prev-slide">&#10094;</span>
+            <span class="next-slide">&#10095;</span>
         </div>
     </section>
 
@@ -43,17 +62,17 @@
         <h2>Our Services</h2>
         <div class="service-list">
             <div class="service-item fade-in-up">
-                <img src="https://via.placeholder.com/100" alt="Warehousing">
+                <img src="https://via.placeholder.com/100/EA580C/FFFFFF" alt="Warehousing">
                 <h3>Warehousing</h3>
                 <p>Safe and secure storage solutions.</p>
             </div>
             <div class="service-item fade-in-up">
-                <img src="https://via.placeholder.com/100" alt="Transportation">
+                <img src="https://via.placeholder.com/100/31318F/FFFFFF" alt="Transportation">
                 <h3>Transportation</h3>
                 <p>Efficient and reliable delivery services.</p>
             </div>
             <div class="service-item fade-in-up">
-                <img src="https://via.placeholder.com/100" alt="Last Mile Delivery">
+                <img src="https://via.placeholder.com/100/4A4A4A/FFFFFF" alt="Last Mile Delivery">
                 <h3>Last Mile Delivery</h3>
                 <p>Ensuring your goods reach the final destination.</p>
             </div>
@@ -65,17 +84,17 @@
         <h2>Meet the Team</h2>
         <div class="team-list">
             <div class="team-member fade-in-up">
-                <img src="https://via.placeholder.com/150" alt="John Doe">
+                <img src="https://via.placeholder.com/150/EA580C/FFFFFF" alt="John Doe">
                 <h3>John Doe</h3>
                 <p>CEO</p>
             </div>
             <div class="team-member fade-in-up">
-                <img src="https://via.placeholder.com/150" alt="Jane Smith">
+                <img src="https://via.placeholder.com/150/31318F/FFFFFF" alt="Jane Smith">
                 <h3>Jane Smith</h3>
                 <p>Operations Manager</p>
             </div>
             <div class="team-member fade-in-up">
-                <img src="https://via.placeholder.com/150" alt="Sam Wilson">
+                <img src="https://via.placeholder.com/150/4A4A4A/FFFFFF" alt="Sam Wilson">
                 <h3>Sam Wilson</h3>
                 <p>Logistics Coordinator</p>
             </div>
@@ -97,33 +116,13 @@
         </div>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-info fade-in">
-            <p>Phone: (123) 456-7890</p>
-            <p>Email: info@logistics.com</p>
-            <p>Address: 123 Logistics St, City, Country</p>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-        <div id="map" class="fade-in">
-            <!-- Embed Google Map -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093746!2d144.95373531590457!3d-37.8162189797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5777f69f18eb9bb!2sEnvato!5e0!3m2!1sen!2sau!4v1613912078881!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Logistics Company. All rights reserved.</p>
         <div class="footer-links">
             <a href="#about">About Us</a>
             <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#team">Team</a>
             <a href="#privacy">Privacy Policy</a>
         </div>
     </footer>
