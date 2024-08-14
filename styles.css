@@ -1,292 +1,70 @@
-/* Global Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    scroll-behavior: smooth;
-    background-color: #F5F5F5; /* Lighter background color */
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Navbar Styles */
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(218, 90, 12, 0.9);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-.nav-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #FFFFFF;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links a {
-    color: #FFFFFF;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.nav-links a:hover {
-    background-color: #31318F;
-}
-
-/* Hero Section Styles */
-#hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.hero-slider {
-    display: flex;
-    width: 300%;
-    transition: transform 1s ease;
-}
-
-.slide {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
+    align-items: center;
     height: 100vh;
-    width: 100vw;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.slide-content {
-    position: absolute;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.slide-content h1 {
-    font-size: 3em;
-    margin: 0;
-    animation: fadeInDown 1s ease-out;
-}
-
-.slide-content p {
-    font-size: 1.5em;
-    animation: fadeInUp 1s ease-out;
-}
-
-.slider-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.prev-slide, .next-slide {
-    pointer-events: all;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2em;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.prev-slide:hover, .next-slide:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Section Styles */
-section {
-    padding: 80px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s, transform 0.6s;
-}
-
-section.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
+    background-color: #D8DADE;
     color: #31318F;
-}
-
-.about-content, .service-list, .team-list, .testimonial-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.about-content img, .team-member img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.service-item, .team-member, .testimonial-item {
-    max-width: 300px;
     text-align: center;
-    background-color: #FFFFFF;
-    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #EA580C;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.time-block {
+    font-size: 32px;
+    background: rgba(234, 88, 12, 0.1);
+    padding: 15px 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #EA580C;
     transition: transform 0.3s;
 }
 
-.service-item:hover, .team-member:hover, .testimonial-item:hover {
-    transform: translateY(-5px);
+.time-block:hover {
+    transform: translateY(-10px);
 }
 
-.testimonial-item p {
-    font-style: italic;
-    color: #EA580C;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #31318F;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.footer-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* Animations */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Fade-in Effects */
-.fade-in {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links li {
-        margin-bottom: 10px;
-    }
-
-    .hero-slider {
-        width: 100%;
-    }
-
-    .slide-content h1 {
-        font-size: 2em;
-    }
-
-    .slide-content p {
-        font-size: 1.2em;
-    }
-
-    .service-item, .team-member, .testimonial-item {
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    .slide-content h1 {
-        font-size: 1.5em;
-    }
-
-    .slide-content p {
-        font-size: 1em;
-    }
-
-    .slider-controls {
-        flex-direction: column;
-    }
-
-    .prev-slide, .next-slide {
-        font-size: 1.5em;
-        padding: 5px 10px;
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
