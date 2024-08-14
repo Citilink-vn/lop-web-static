@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     scroll-behavior: smooth;
+    background-color: #D8DADE;
     overflow-x: hidden;
 }
 
@@ -17,7 +18,7 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(218, 90, 12, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: background-color 0.3s;
@@ -35,6 +36,7 @@ a {
 .nav-logo {
     font-size: 1.5em;
     font-weight: bold;
+    color: #FFFFFF;
 }
 
 .nav-links {
@@ -47,49 +49,81 @@ a {
     position: relative;
 }
 
-.nav-links a:hover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background-color: #007BFF;
-    transition: width 0.3s;
+.nav-links a {
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #31318F;
 }
 
 #hero {
-    background: url('https://via.placeholder.com/1600x500') no-repeat center center;
-    background-size: cover;
+    position: relative;
     color: white;
     text-align: center;
-    padding: 150px 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.hero-content h1 {
+.hero-slider {
+    display: flex;
+    height: 100%;
+    width: 300%;
+    transition: transform 1s ease;
+}
+
+.slide {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content h1 {
     font-size: 3em;
     margin: 0;
     animation: fadeInDown 1s ease-out;
 }
 
-.hero-content p {
+.slide-content p {
     font-size: 1.5em;
     animation: fadeInUp 1s ease-out;
 }
 
-button {
-    background-color: #ff6600;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
-button:hover {
-    background-color: #ff8533;
-    transform: translateY(-3px);
+.prev-slide, .next-slide {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2em;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev-slide:hover, .next-slide:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 section {
@@ -100,120 +134,103 @@ section {
     transition: opacity 0.6s, transform 0.6s;
 }
 
+
+
 section.in-view {
     opacity: 1;
     transform: translateY(0);
 }
 
 h2 {
-    font-size: 2em;
-margin-bottom: 40px;
-animation: fadeIn 1s ease-out;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #31318F;
 }
 
-.about-content, .team-list, .service-list, .testimonial-list {
-display: flex;
-justify-content: center;
-gap: 20px;
-flex-wrap: wrap;
+.about-content, .service-list, .team-list, .testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .about-content img, .team-member img {
-max-width: 100%;
-border-radius: 10px;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
 .service-item, .team-member, .testimonial-item {
-max-width: 300px;
-text-align: center;
+    max-width: 300px;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover, .team-member:hover, .testimonial-item:hover {
+    transform: translateY(-5px);
 }
 
 .testimonial-item p {
-font-style: italic;
-}
-
-#contact {
-background-color: #f9f9f9;
-}
-
-#contact-form input, #contact-form textarea {
-width: 100%;
-padding: 15px;
-margin-bottom: 15px;
-border-radius: 5px;
-border: 1px solid #ccc;
-}
-
-#contact-form button {
-width: 100%;
-padding: 15px;
-background-color: #007BFF;
-color: white;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s, transform 0.3s;
-}
-
-#contact-form button:hover {
-background-color: #0056b3;
-transform: translateY(-3px);
+    font-style: italic;
+    color: #EA580C;
 }
 
 footer {
-background-color: #333;
-color: white;
-text-align: center;
-padding: 20px;
+    background-color: #31318F;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 .footer-links a {
-color: white;
-margin: 0 10px;
-text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 .footer-links a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Animations */
 @keyframes fadeIn {
-0% {
-opacity: 0;
-}
-100% {
-opacity: 1;
-}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeInUp {
-0% {
-opacity: 0;
-transform: translateY(20px);
-}
-100% {
-opacity: 1;
-transform: translateY(0);
-}
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInDown {
-0% {
-opacity: 0;
-transform: translateY(-20px);
-}
-100% {
-opacity: 1;
-transform: translateY(0);
-}
-}
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 /* Fade-in Effects */
 .fade-in {
-animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .fade-in-up {
-animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards;
 }
