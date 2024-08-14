@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.countdown div {
+    font-size: 32px;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.subscribe button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #0072ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe button:hover {
+    background-color: #00c6ff;
+}
