@@ -6,61 +6,65 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #00c6ff, #0072ff);
-    color: #fff;
+    background-color: #D8DADE;
+    color: #31318F;
     text-align: center;
 }
 
 .container {
     max-width: 600px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #EA580C;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 p {
     font-size: 18px;
     margin-bottom: 40px;
+    animation: fadeInUp 1.2s ease-in-out;
 }
 
 .countdown {
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
-.countdown div {
+.time-block {
     font-size: 32px;
+    background: rgba(234, 88, 12, 0.1);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #EA580C;
+    transition: transform 0.3s;
 }
 
-.subscribe {
-    display: flex;
-    justify-content: center;
+.time-block:hover {
+    transform: translateY(-10px);
 }
 
-.subscribe input {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px 0 0 5px;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.subscribe button {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: #0072ff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.subscribe button:hover {
-    background-color: #00c6ff;
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
