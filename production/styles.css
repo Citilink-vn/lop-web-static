@@ -61,6 +61,32 @@ a {
     background-color: #31318F;
 }
 
+/* Active menu item animation */
+.nav-links a.active {
+    background-color: #31318F;
+    color: #FFFFFF;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Optional: Adding a border or underline effect */
+.nav-links a.active::after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin-top: 5px;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 /* Hero Section Styles */
 /* Hero Section Styles */
 #hero {
