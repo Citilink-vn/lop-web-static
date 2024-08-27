@@ -476,6 +476,12 @@ footer {
     text-align: center;
 }
 
+#core-values h3 {
+    font-size: 26px;
+    color: #EA580C;
+    margin-bottom: 20px;
+}
+
 #core-values p {
     font-size: 18px;
     text-align: center;
@@ -485,11 +491,19 @@ footer {
 }
 
 .core-values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns by default */
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+}
+
+.core-value-grid-first,
+.core-value-grid-second {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
 }
 
 .core-value-item {
@@ -502,8 +516,10 @@ footer {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 100%; 
+    height: 200px; 
     line-height: 1.5;
+    flex: 1;
+    max-width: 380px; 
 }
 
 .core-value-item i {
@@ -518,30 +534,18 @@ footer {
     font-size: 16px !important;
 }
 
-/* Ensure bottom two items span the full width in a single row */
-@media (min-width: 769px) {
-    .core-values-grid > :nth-last-child(2):nth-child(odd) {
-        grid-column: span 2; /* Make the first of the last two items span 2 columns */
-    }
-
-    .core-values-grid > :nth-last-child(2):nth-child(odd) ~ .core-value-item {
-        grid-column: span 2; /* Make the second of the last two items span 2 columns */
-    }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .core-values-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    .core-value-grid-first, .core-value-grid-second {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 500px) {
-    .core-values-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
+    .core-value-grid-first, .core-value-grid-second {
+        flex-direction: column;
     }
 }
-
 
 #shipping-process {
     max-width: 1200px;
@@ -835,4 +839,7 @@ h2 i {
         margin-bottom: 10px;
     }
 }
+
+
+
 
