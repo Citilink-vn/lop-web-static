@@ -21,6 +21,16 @@ document.querySelectorAll('.nav-links a').forEach(item => {
     });
 });
 
+document.querySelectorAll('.footer-column a').forEach(item => {
+    item.addEventListener('click', function(e) {
+        const targetSection = this.getAttribute('href');
+        if (targetSection.startsWith('#')) {
+            e.preventDefault();
+            scrollToSection(targetSection, this);
+        }
+    });
+});
+
 // Add 'in-view' class when section is in view
 const sections = document.querySelectorAll('section');
 
