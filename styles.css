@@ -103,6 +103,7 @@ a {
     background: url('https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/391631709_704817245007872_6294244328532327394_n.png?_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=_gmmZg_f6cAQ7kNvgHMMh09&_nc_ht=scontent.fsgn2-8.fna&oh=00_AYCI_t0Qv_713eOKxGxVCae31AIyu2rdpdRwrZCWOS-8GQ&oe=66CDC6DF') no-repeat center center;
     background-size: cover;
     height: 400px;
+    margin-bottom: 50px;
     /* color: white; */
     /* text-align: center;
     padding: 150px 0; */
@@ -236,7 +237,7 @@ h4 {
     flex: 1;
     /* width: 100%; */
     width: 350px;
-    height: 250px;
+    height: 300px;
     object-fit: fill; /* Ensure the image covers the entire area */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
