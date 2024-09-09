@@ -1,0 +1,91 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(218, 90, 12, 0.9);
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back-home-btn {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #0056b3;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.back-home-btn:hover {
+    background-color: #003f7f;
+}
+
+/* Main Section */
+#delete-account {
+    max-width: 1000px;
+    margin: 100px auto 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#delete-account h1 {
+    color: #EA580C;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#delete-account h2 {
+    color: #0056b3;
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#delete-account p, ul {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(218, 90, 12, 0.9);
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
